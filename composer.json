@@ -1,8 +1,8 @@
 {
-  "name": "setbased/php-affirm",
+  "name": "setbased/exception",
   "description": "Exceptions with format string",
   "keywords": [
-    "Exception"
+    "Exception", "Format"
   ],
   "type": "library",
   "license": "MIT",
