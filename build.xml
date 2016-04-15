@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="php-affirm" default="build" basedir=".">
+    <target name="build">
+    </target>
+
+    <!-- Runs all unit tests -->
+    <target name="unit">
+        <exec command="bin/phpunit --bootstrap=test/bootstrap.php test" passthru="true" checkreturn="true"/>
+    </target>
+</project>
