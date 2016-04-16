@@ -63,16 +63,13 @@ trait FormattedException
       $special = $format;
       $format  = array_shift($args);
 
-      if (isset($special[0]))
+      for ($i = 0; $i<2; $i++)
       {
-        if ($special[0] instanceof \Exception) $previous = $special[0];
-        elseif (is_int($special[0])) $code = $special[0];
-      }
-
-      if (isset($special[1]))
-      {
-        if ($special[1] instanceof \Exception) $previous = $special[1];
-        elseif (is_int($special[1])) $code = $special[1];
+        if (isset($special[$i]))
+        {
+          if ($special[$i] instanceof \Exception) $previous = $special[$i];
+          elseif (is_int($special[$i])) $code = $special[$i];
+        }
       }
     }
 
