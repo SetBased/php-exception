@@ -4,12 +4,25 @@ namespace SetBased\Exception;
 
 //----------------------------------------------------------------------------------------------------------------------
 /**
- * Parent class for errors in the program logic.
+ * Class for errors in program logic.
  */
 class LogicException extends \LogicException implements NamedException
 {
   //--------------------------------------------------------------------------------------------------------------------
   use FormattedException;
+
+  //--------------------------------------------------------------------------------------------------------------------
+  /**
+   * Object constructor.
+   *
+   * @param mixed ... The arguments, see {@see \SetBased\Exception\FormattedException::formattedConstruct}.
+   */
+  public function __construct()
+  {
+    list($message, $code, $previous) = self::formattedConstruct(func_get_args());
+
+    parent::__construct($message, $code, $previous);
+  }
 
   //--------------------------------------------------------------------------------------------------------------------
   /**

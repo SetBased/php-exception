@@ -1,6 +1,6 @@
 <?php
 //----------------------------------------------------------------------------------------------------------------------
-class RuntimeExceptionTest extends \ExceptionTestBase
+class RuntimeFormattedExceptionTest extends \FormattedExceptionTestBase
 {
   //--------------------------------------------------------------------------------------------------------------------
   public function setUp()

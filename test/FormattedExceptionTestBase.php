@@ -3,7 +3,7 @@
 use SetBased\Exception\NamedException;
 
 //----------------------------------------------------------------------------------------------------------------------
-class ExceptionTestBase extends PHPUnit_Framework_TestCase
+class FormattedExceptionTestBase extends PHPUnit_Framework_TestCase
 {
   //--------------------------------------------------------------------------------------------------------------------
   static $class;
