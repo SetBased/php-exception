@@ -28,7 +28,7 @@ trait FormattedException
   /**
    * Returns a list of arguments for \Exception::_construct.
    *
-   * @param \array $args The arguments for __construct.
+   * @param array $args The arguments for __construct.
    *
    * Below we give same samples of valid combinations for arguments for __construct.
    * ```
@@ -50,7 +50,7 @@ trait FormattedException
    * new MyException([$previous,$code], 'There are %d monkeys in the %s', 5, 'tree');
    * ```
    *
-   * @return \array[]
+   * @return array
    */
   public static function formattedConstruct($args)
   {
