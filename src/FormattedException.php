@@ -50,7 +50,7 @@ trait FormattedException
    * new MyException([$previous,$code], 'There are %d monkeys in the %s', 5, 'tree');
    * ```
    *
-   * @return \array[string,int,\Exception|null]
+   * @return \array[]
    */
   public static function formattedConstruct($args)
   {
