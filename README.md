@@ -20,7 +20,7 @@
 </td>
 <td>
 <a href="https://packagist.org/packages/setbased/exception"><img src="https://poser.pugx.org/setbased/exception/v/stable" alt="Latest Stable Version"/></a><br/>
-<a href="https://www.versioneye.com/user/projects/cbe85532d70a442382714e8a9ba9d276"><img src="https://www.versioneye.com/user/projects/cbe85532d70a442382714e8a9ba9d276/badge.svg?style=flat" alt="Dependency Status"/></a>
+<a href="https://www.versioneye.com/user/projects/571143d0fcd19a00518559f0"><img src="https://www.versioneye.com/user/projects/571143d0fcd19a00518559f0/badge.svg?style=flat" alt="Dependency Status"/></a>
 </td>
 <td>
 <a href="https://travis-ci.org/SetBased/php-exception"><img src="https://travis-ci.org/SetBased/php-exception.svg?branch=master" alt="Build Status"/></a><br/>
