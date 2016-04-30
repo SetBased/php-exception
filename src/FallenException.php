@@ -12,8 +12,8 @@ class FallenException extends RuntimeException
   /**
    * Object constructor.
    *
-   * @param string $theName  The name or description of the variable of expression.
-   * @param string $theValue The actual value that.
+   * @param string $name  The name or description of the variable of expression.
+   * @param string $value The actual value the variable or expression.
    *
    * Example:
    * ```
@@ -37,9 +37,9 @@ class FallenException extends RuntimeException
    *  }
    * ```
    */
-  public function __construct($theName, $theValue)
+  public function __construct($name, $value)
   {
-    parent::__construct("Unknown or unexpected value '%s' for '%s'.", $theValue, $theName);
+    parent::__construct("Unknown or unexpected value '%s' for '%s'.", $value, $name);
   }
 
   //--------------------------------------------------------------------------------------------------------------------
