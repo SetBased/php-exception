@@ -16,6 +16,9 @@ class LogicException extends \LogicException implements NamedException
    * Object constructor.
    *
    * @param mixed ... The arguments, see {@see \SetBased\Exception\FormattedException::formattedConstruct}.
+   *
+   * @since 1.0.0
+   * @api
    */
   public function __construct()
   {

@@ -18,6 +18,9 @@ class RuntimeException extends \RuntimeException implements NamedException
    * See {@see \SetBased\Exception\FormattedException::formattedConstruct()} for argument list.
    *
    * @param mixed ... The arguments, see {@see \SetBased\Exception\FormattedException::formattedConstruct()}.
+   *
+   * @since 1.0.0
+   * @api
    */
   public function __construct()
   {

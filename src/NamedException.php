@@ -13,6 +13,9 @@ interface NamedException
    * Returns a user-friendly name of this exception.
    *
    * @return string
+   *
+   * @since 1.0.0
+   * @api
    */
   public function getName();
 

@@ -27,6 +27,9 @@ class ErrorException extends \ErrorException implements NamedException
   //--------------------------------------------------------------------------------------------------------------------
   /**
    * {@inheritdoc}
+   *
+   * @since 1.0.0
+   * @api
    */
   public function getName()
   {

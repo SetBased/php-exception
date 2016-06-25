@@ -15,6 +15,9 @@ class FallenException extends RuntimeException
    * @param string $name  The name or description of the variable of expression.
    * @param string $value The actual value the variable or expression.
    *
+   * @since 1.0.0
+   * @api
+   *
    * Example:
    * ```
    *  $size = 'xxl';

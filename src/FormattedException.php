@@ -51,6 +51,9 @@ trait FormattedException
    * ```
    *
    * @return array
+   *
+   * @since 1.0.0
+   * @api
    */
   public static function formattedConstruct($args)
   {
