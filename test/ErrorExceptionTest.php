@@ -1,9 +1,14 @@
 <?php
 //----------------------------------------------------------------------------------------------------------------------
+namespace SetBased\Exception\Test;
+
+use PHPUnit\Framework\TestCase;
 use SetBased\Exception\ErrorException;
 
-//----------------------------------------------------------------------------------------------------------------------
-class ErrorExceptionTest extends PHPUnit_Framework_TestCase
+/**
+ * Test cases for class ErrorException.
+ */
+class ErrorExceptionTest extends TestCase
 {
   //--------------------------------------------------------------------------------------------------------------------
   /**
@@ -17,7 +22,7 @@ class ErrorExceptionTest extends PHPUnit_Framework_TestCase
     }
     catch (ErrorException $e)
     {
-      $this->assertSame('PHP Warning', $e->getName());
+      self::assertSame('PHP Warning', $e->getName());
     }
   }
 
@@ -33,7 +38,7 @@ class ErrorExceptionTest extends PHPUnit_Framework_TestCase
     }
     catch (ErrorException $e)
     {
-      $this->assertSame('Error', $e->getName());
+      self::assertSame('Error', $e->getName());
     }
   }
 

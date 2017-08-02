@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project name="php-affirm" default="build" basedir=".">
+<project name="php-exception" default="build" basedir=".">
     <target name="build">
+    </target>
+
+    <!-- Run composer update -->
+    <target name="update">
+        <exec command="composer update" checkreturn="true" passthru="true"/>
     </target>
 
     <!-- Runs ApiGen -->

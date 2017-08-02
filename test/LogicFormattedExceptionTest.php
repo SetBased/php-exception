@@ -1,14 +1,19 @@
 <?php
 //----------------------------------------------------------------------------------------------------------------------
-class RuntimeFormattedExceptionTest extends \FormattedExceptionTestBase
+namespace SetBased\Exception\Test;
+
+/**
+ * Test case for class LogicException.
+ */
+class LogicFormattedExceptionTest extends FormattedExceptionTestBase
 {
   //--------------------------------------------------------------------------------------------------------------------
   public function setUp()
   {
     parent::setUp();
 
-    self::$class = '\SetBased\Exception\RuntimeException';
-    self::$name = 'Error';
+    self::$class = '\SetBased\Exception\LogicException';
+    self::$name = 'Programming Error';
   }
 
   //--------------------------------------------------------------------------------------------------------------------

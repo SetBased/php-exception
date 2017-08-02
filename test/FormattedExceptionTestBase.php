@@ -1,9 +1,14 @@
 <?php
 //----------------------------------------------------------------------------------------------------------------------
+namespace SetBased\Exception\Test;
+
+use PHPUnit\Framework\TestCase;
 use SetBased\Exception\NamedException;
 
-//----------------------------------------------------------------------------------------------------------------------
-class FormattedExceptionTestBase extends PHPUnit_Framework_TestCase
+/**
+ * Test cases for class FormattedException.
+ */
+class FormattedExceptionTestBase extends TestCase
 {
   //--------------------------------------------------------------------------------------------------------------------
   static $class;
@@ -27,10 +32,10 @@ class FormattedExceptionTestBase extends PHPUnit_Framework_TestCase
 
       throw new self::$class([$num], $format, $num, $location);
     }
-    catch (Exception $e)
+    catch (\Exception $e)
     {
       /** @var $e NamedException */
-      $this->assertSame(self::$name, $e->getName());
+      self::assertSame(self::$name, $e->getName());
     }
   }
 
@@ -49,10 +54,10 @@ class FormattedExceptionTestBase extends PHPUnit_Framework_TestCase
 
       throw new self::$class([$num], $format, $num, $location);
     }
-    catch (Exception $e)
+    catch (\Exception $e)
     {
-      $this->assertSame('There are 5 monkeys in the tree', $e->getMessage());
-      $this->assertSame($num, $e->getCode());
+      self::assertSame('There are 5 monkeys in the tree', $e->getMessage());
+      self::assertSame($num, $e->getCode());
     }
   }
 
@@ -71,9 +76,9 @@ class FormattedExceptionTestBase extends PHPUnit_Framework_TestCase
 
       throw new self::$class($format, $num, $location);
     }
-    catch (Exception $e)
+    catch (\Exception $e)
     {
-      $this->assertSame('There are 5 monkeys in the tree', $e->getMessage());
+      self::assertSame('There are 5 monkeys in the tree', $e->getMessage());
     }
   }
 
@@ -93,10 +98,10 @@ class FormattedExceptionTestBase extends PHPUnit_Framework_TestCase
 
       throw new self::$class([$previous], $format, $num, $location);
     }
-    catch (Exception $e)
+    catch (\Exception $e)
     {
-      $this->assertSame('There are 5 monkeys in the tree', $e->getMessage());
-      $this->assertSame($previous, $e->getPrevious());
+      self::assertSame('There are 5 monkeys in the tree', $e->getMessage());
+      self::assertSame($previous, $e->getPrevious());
     }
   }
 
@@ -116,11 +121,11 @@ class FormattedExceptionTestBase extends PHPUnit_Framework_TestCase
 
       throw new self::$class([$num, $previous], $format, $num, $location);
     }
-    catch (Exception $e)
+    catch (\Exception $e)
     {
-      $this->assertSame('There are 5 monkeys in the tree', $e->getMessage());
-      $this->assertSame($previous, $e->getPrevious());
-      $this->assertSame($num, $e->getCode());
+      self::assertSame('There are 5 monkeys in the tree', $e->getMessage());
+      self::assertSame($previous, $e->getPrevious());
+      self::assertSame($num, $e->getCode());
     }
   }
 
@@ -140,11 +145,11 @@ class FormattedExceptionTestBase extends PHPUnit_Framework_TestCase
 
       throw new self::$class([$previous, $num], $format, $num, $location);
     }
-    catch (Exception $e)
+    catch (\Exception $e)
     {
-      $this->assertSame('There are 5 monkeys in the tree', $e->getMessage());
-      $this->assertSame($previous, $e->getPrevious());
-      $this->assertSame($num, $e->getCode());
+      self::assertSame('There are 5 monkeys in the tree', $e->getMessage());
+      self::assertSame($previous, $e->getPrevious());
+      self::assertSame($num, $e->getCode());
     }
   }
 

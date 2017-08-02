@@ -2,20 +2,26 @@
   "name": "setbased/exception",
   "description": "Exceptions with format string",
   "keywords": [
-    "Exception", "Format"
+    "Exception",
+    "Format"
   ],
   "type": "library",
   "license": "MIT",
   "require": {
-    "php": ">=5.4.0"
+    "php": ">=7.0.0"
   },
   "require-dev": {
-    "phing/phing": "2.*",
-    "phpunit/phpunit": ">=4.0 <6.0"
+    "phing/phing": "^2.0.0",
+    "phpunit/phpunit": "^6.0.0"
   },
   "autoload": {
     "psr-4": {
       "SetBased\\Exception\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "SetBased\\Exception\\Test\\": "test/"
     }
   },
   "config": {
