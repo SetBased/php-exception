@@ -26,8 +26,7 @@
 <a href="https://scrutinizer-ci.com/g/SetBased/php-exception/?branch=master"><img src="https://scrutinizer-ci.com/g/SetBased/php-exception/badges/coverage.png?b=master" alt="Code Coverage"/></a>
 </td>
 <td>
-<a href="https://scrutinizer-ci.com/g/SetBased/php-exception/?branch=master"><img src="https://scrutinizer-ci.com/g/SetBased/php-exception/badges/quality-score.png?b=master" alt="Scrutinizer Code Quality"/></a><br/>
-<a href="https://travis-ci.org/SetBased/php-exception"><img src="http://php7ready.timesplinter.ch/SetBased/php-exception/badge.svg" alt="PHP 7 ready"/></a>
+<a href="https://scrutinizer-ci.com/g/SetBased/php-exception/?branch=master"><img src="https://scrutinizer-ci.com/g/SetBased/php-exception/badges/quality-score.png?b=master" alt="Scrutinizer Code Quality"/></a>
 </td>
 </tr>
 </tbody>
