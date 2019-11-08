@@ -1,8 +1,8 @@
 <?php
-//----------------------------------------------------------------------------------------------------------------------
+declare(strict_types=1);
+
 namespace SetBased\Exception;
 
-//----------------------------------------------------------------------------------------------------------------------
 /**
  * Class for PHP errors.
  */
@@ -31,7 +31,7 @@ class ErrorException extends \ErrorException implements NamedException
    * @since 1.0.0
    * @api
    */
-  public function getName()
+  public function getName(): string
   {
     return isset(self::$ourNames[$this->getCode()]) ? self::$ourNames[$this->getCode()] : 'Error';
   }

@@ -1,5 +1,6 @@
 <?php
-//----------------------------------------------------------------------------------------------------------------------
+declare(strict_types=1);
+
 namespace SetBased\Exception\Test;
 
 /**
@@ -8,7 +9,7 @@ namespace SetBased\Exception\Test;
 class RuntimeFormattedExceptionTest extends FormattedExceptionTestBase
 {
   //--------------------------------------------------------------------------------------------------------------------
-  public function setUp()
+  public function setUp(): void
   {
     parent::setUp();
 

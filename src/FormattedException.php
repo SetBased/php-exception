@@ -1,8 +1,10 @@
 <?php
-//----------------------------------------------------------------------------------------------------------------------
+declare(strict_types=1);
+
 namespace SetBased\Exception;
 
-//----------------------------------------------------------------------------------------------------------------------
+use Exception;
+
 /**
  * Trait for exception classes with format string in constructor.
  *
@@ -23,7 +25,22 @@ namespace SetBased\Exception;
  */
 trait FormattedException
 {
-  /* PHP 5.4: doesn't allow us to use __construct in traits. This possible from PHP 5.5 and higher. */
+  //--------------------------------------------------------------------------------------------------------------------
+  /**
+   * Object constructor.
+   *
+   * @param mixed ... The arguments, see {@see formattedConstruct()}.
+   *
+   * @since 2.0.0
+   * @api
+   */
+  public function __construct()
+  {
+    list($message, $code, $previous) = self::formattedConstruct(func_get_args());
+
+    parent::__construct($message, $code, $previous);
+  }
+
   //--------------------------------------------------------------------------------------------------------------------
   /**
    * Returns a list of arguments for \Exception::_construct.
@@ -37,6 +54,9 @@ trait FormattedException
    *
    * // Exception with a format string
    * new MyException('There are %d monkeys in the %s', 5, 'tree');
+   *
+   * // Exception with a message
+   * new MyException('Of all monkey 50% are in the tree');
    *
    * // Exception with an exception code
    * new MyException([$code], 'There are %d monkeys in the %s', 5, 'tree');
@@ -55,7 +75,7 @@ trait FormattedException
    * @since 1.0.0
    * @api
    */
-  public static function formattedConstruct($args)
+  public static function formattedConstruct($args): array
   {
     $code     = 0;
     $previous = null;
@@ -70,13 +90,13 @@ trait FormattedException
       {
         if (isset($special[$i]))
         {
-          if ($special[$i] instanceof \Exception) $previous = $special[$i];
+          if ($special[$i] instanceof Exception) $previous = $special[$i];
           elseif (is_int($special[$i])) $code = $special[$i];
         }
       }
     }
 
-    return [vsprintf($format, $args), $code, $previous];
+    return [empty($args) ? $format : vsprintf($format, $args), $code, $previous];
   }
 
   //--------------------------------------------------------------------------------------------------------------------

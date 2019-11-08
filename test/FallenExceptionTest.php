@@ -1,7 +1,9 @@
 <?php
-//----------------------------------------------------------------------------------------------------------------------
+declare(strict_types=1);
+
 namespace SetBased\Exception\Test;
 
+use Exception;
 use PHPUnit\Framework\TestCase;
 use SetBased\Exception\FallenException;
 
@@ -11,16 +13,16 @@ use SetBased\Exception\FallenException;
 class FallenExceptionTest extends TestCase
 {
   //--------------------------------------------------------------------------------------------------------------------
-  public function testName()
+  public function testName(): void
   {
     try
     {
       throw new FallenException('foo', 'bar');
     }
-    catch (\Exception $e)
+    catch (Exception $e)
     {
-      self::assertContains('foo', $e->getMessage());
-      self::assertContains('bar', $e->getMessage());
+      self::assertStringContainsString('foo', $e->getMessage());
+      self::assertStringContainsString('bar', $e->getMessage());
       self::assertInstanceOf('\RuntimeException', $e);
     }
   }

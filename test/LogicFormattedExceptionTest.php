@@ -1,5 +1,6 @@
 <?php
-//----------------------------------------------------------------------------------------------------------------------
+declare(strict_types=1);
+
 namespace SetBased\Exception\Test;
 
 /**
@@ -8,12 +9,12 @@ namespace SetBased\Exception\Test;
 class LogicFormattedExceptionTest extends FormattedExceptionTestBase
 {
   //--------------------------------------------------------------------------------------------------------------------
-  public function setUp()
+  public function setUp(): void
   {
     parent::setUp();
 
     self::$class = '\SetBased\Exception\LogicException';
-    self::$name = 'Programming Error';
+    self::$name  = 'Programming Error';
   }
 
   //--------------------------------------------------------------------------------------------------------------------

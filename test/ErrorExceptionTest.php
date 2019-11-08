@@ -1,5 +1,6 @@
 <?php
-//----------------------------------------------------------------------------------------------------------------------
+declare(strict_types=1);
+
 namespace SetBased\Exception\Test;
 
 use PHPUnit\Framework\TestCase;
@@ -14,7 +15,7 @@ class ErrorExceptionTest extends TestCase
   /**
    * Test ErrorException with valid code.
    */
-  public function test1()
+  public function test1(): void
   {
     try
     {
@@ -30,7 +31,7 @@ class ErrorExceptionTest extends TestCase
   /**
    * Test ErrorException with invalid code.
    */
-  public function test2()
+  public function test2(): void
   {
     try
     {
