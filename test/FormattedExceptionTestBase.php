@@ -106,6 +106,42 @@ class FormattedExceptionTestBase extends TestCase
 
   //--------------------------------------------------------------------------------------------------------------------
   /**
+   * Test formatting null string.
+   */
+  public function testFormattingNull1(): void
+  {
+    try
+    {
+      $format = null;
+
+      throw new self::$class($format);
+    }
+    catch (Exception $e)
+    {
+      self::assertSame('', $e->getMessage());
+    }
+  }
+
+  //--------------------------------------------------------------------------------------------------------------------
+  /**
+   * Test formatting null string and bogus arguments.
+   */
+  public function testFormattingNull2(): void
+  {
+    try
+    {
+      $format = null;
+
+      throw new self::$class($format, 'bogus', 123);
+    }
+    catch (Exception $e)
+    {
+      self::assertSame('', $e->getMessage());
+    }
+  }
+
+  //--------------------------------------------------------------------------------------------------------------------
+  /**
    * Test formatting string with missing arguments.
    */
   public function testFormattingMissingArgs2(): void

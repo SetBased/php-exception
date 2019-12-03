@@ -79,7 +79,7 @@ trait FormattedException
   {
     $code     = 0;
     $previous = null;
-    $format   = array_shift($args);
+    $format   = array_shift($args) ?? '';
 
     if (is_array($format))
     {
