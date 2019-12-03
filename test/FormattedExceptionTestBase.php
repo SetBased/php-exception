@@ -14,8 +14,18 @@ use SetBased\Exception\NamedException;
 class FormattedExceptionTestBase extends TestCase
 {
   //--------------------------------------------------------------------------------------------------------------------
+  /**
+   * The class being tested.
+   *
+   * @var string
+   */
   static $class;
 
+  /**
+   * The name of the exception.
+   *
+   * @var string
+   */
   static $name;
 
   //--------------------------------------------------------------------------------------------------------------------
