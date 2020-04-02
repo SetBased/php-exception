@@ -1,8 +1,10 @@
 /.idea/
 /.phpunit.result.cache
 /bin/
-/doc/
 /composer.lock
-/test/report
+/custom.task.properties
+/custom.type.properties
+/doc/
 /test/coverage.xml
+/test/report
 /vendor/
