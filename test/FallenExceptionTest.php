@@ -23,7 +23,7 @@ class FallenExceptionTest extends TestCase
     {
       self::assertStringContainsString('foo', $e->getMessage());
       self::assertStringContainsString('bar', $e->getMessage());
-      self::assertInstanceOf(\RuntimeException::class, $e);
+      self::assertInstanceOf(\LogicException::class, $e);
     }
   }
 

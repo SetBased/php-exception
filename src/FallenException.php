@@ -6,7 +6,7 @@ namespace SetBased\Exception;
 /**
  * Class for situations where PHP code has fallen through a switch statement or a combination of if-elseif statements.
  */
-class FallenException extends RuntimeException
+class FallenException extends LogicException
 {
   //--------------------------------------------------------------------------------------------------------------------
   /**
