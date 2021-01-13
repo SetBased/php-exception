@@ -5,12 +5,17 @@
 
     <!-- Run composer update -->
     <target name="update">
-        <exec command="composer update" checkreturn="true" passthru="true"/>
-    </target>
+        <exec executable="composer" checkreturn="true" passthru="true">
+            <arg value="--ansi"/>
+            <arg value="update"/>
+        </exec>
 
-    <!-- Runs ApiGen -->
-    <target name="apigen">
-        <exec command="apigen generate --todo --tree --source src --destination doc" passthru="true" checkreturn="true"/>
+        <!-- Show outdated packages -->
+        <exec executable="composer" checkreturn="true" passthru="true">
+            <arg value="--ansi"/>
+            <arg value="outdated"/>
+            <arg value="--direct"/>
+        </exec>
     </target>
 
     <!-- Runs all unit tests -->
