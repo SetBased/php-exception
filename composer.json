@@ -7,7 +7,7 @@
   ],
   "license": "MIT",
   "require": {
-    "php": ">=7.3"
+    "php": ">=7.4"
   },
   "require-dev": {
     "phing/phing": "^2.16.3",

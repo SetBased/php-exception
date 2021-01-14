@@ -4,12 +4,12 @@ dist: trusty
 
 language: php
 php:
-  - '7.3'
   - '7.4'
-  
+  - '8.0'
+
 install:
   - composer self-update
   - composer install
-    
-script: 
+
+script:
   - ./bin/phing unit
