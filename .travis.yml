@@ -1,7 +1,3 @@
-version: ~> 1.0
-
-dist: trusty
-
 language: php
 php:
   - '7.4'
