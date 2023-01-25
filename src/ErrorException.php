@@ -8,6 +8,12 @@ namespace SetBased\Exception;
  */
 class ErrorException extends \ErrorException implements NamedException
 {
+  //--------------------------------------------------------------------------------------------------------------------
+  /**
+   * Map from error codes to error descriptions.
+   *
+   * @var array
+   */
   protected static array $ourNames = [E_COMPILE_ERROR     => 'PHP Compile Error',
                                       E_COMPILE_WARNING   => 'PHP Compile Warning',
                                       E_CORE_ERROR        => 'PHP Core Error',
@@ -25,7 +31,6 @@ class ErrorException extends \ErrorException implements NamedException
                                       E_WARNING           => 'PHP Warning'];
 
   //--------------------------------------------------------------------------------------------------------------------
-
   /**
    * {@inheritdoc}
    *
@@ -34,7 +39,7 @@ class ErrorException extends \ErrorException implements NamedException
    */
   public function getName(): string
   {
-    return isset(self::$ourNames[$this->getCode()]) ? self::$ourNames[$this->getCode()] : 'Error';
+    return self::$ourNames[$this->getCode()] ?? 'Error';
   }
 
   //--------------------------------------------------------------------------------------------------------------------
