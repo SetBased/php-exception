@@ -19,14 +19,14 @@ class FormattedExceptionTestBase extends TestCase
    *
    * @var string
    */
-  static $class;
+  static string $class;
 
   /**
    * The name of the exception.
    *
    * @var string
    */
-  static $name;
+  static string $name;
 
   //--------------------------------------------------------------------------------------------------------------------
 

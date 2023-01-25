@@ -29,14 +29,14 @@ trait FormattedException
   /**
    * Object constructor.
    *
-   * @param mixed ... The arguments, see {@see formattedConstruct()}.
+   * @param mixed ...$args The arguments, see {@see formattedConstruct()}.
    *
    * @since 2.0.0
    * @api
    */
-  public function __construct()
+  public function __construct(...$args)
   {
-    list($message, $code, $previous) = self::formattedConstruct(func_get_args());
+    list($message, $code, $previous) = self::formattedConstruct($args);
 
     parent::__construct($message, $code, $previous);
   }
@@ -75,7 +75,7 @@ trait FormattedException
    * @since 1.0.0
    * @api
    */
-  public static function formattedConstruct($args): array
+  public static function formattedConstruct(array $args): array
   {
     $code     = 0;
     $previous = null;
