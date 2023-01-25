@@ -1,8 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project name="php-exception" default="build" basedir=".">
-    <target name="build">
-    </target>
-
     <!-- Run composer update -->
     <target name="update">
         <exec executable="composer" checkreturn="true" passthru="true">
@@ -20,6 +17,8 @@
 
     <!-- Runs all unit tests -->
     <target name="unit">
-        <exec command="bin/phpunit" passthru="true" checkreturn="true"/>
+        <exec executable="bin/phpunit" passthru="true" checkreturn="true"/>
     </target>
+
+    <target name="build" depends="update,unit"/>
 </project>
